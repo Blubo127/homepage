@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lu, Panzhong is pursuing his dream">
-    <meta name="keywords" content="Panzhong Lu, 卢攀忠, lupanzhong, Panzhong, Lu, Deep Learning, Machine Learning, TJU, HZAU, Multimodal, Visual Language Model and Human-Computer Interaction">
+    <meta name="keywords" content="Panzhong Lu, 卢攀忠, lupanzhong, Panzhong, Lu, Deep Learning, Machine Learning, ZJU, Westlake, TJU, HZAU, Multimodal, Agent, Visual Language Model and Human-Computer Interaction">
     <meta name="author" content="卢攀忠" />
     <!-- Icon -->
     <link href="images/pi.png" rel="shortcut icon" type="image/x-icon">
@@ -16,6 +16,100 @@
     <link rel="stylesheet" href="assets/css/style.css%3Fver=20240601.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Local overrides: language toggle + responsive project cards -->
+    <style>
+        .lang-switch {
+            display: inline-block;
+            margin-left: 12px;
+            padding: 6px 14px;
+            border: 1px solid #c4c7cb;
+            border-radius: 999px;
+            color: #535b61;
+            font-size: 14px;
+            line-height: 1.2;
+            text-decoration: none;
+            transition: all .2s ease;
+            vertical-align: middle;
+        }
+        .lang-switch:hover {
+            background-color: #dc143c;
+            border-color: #dc143c;
+            color: #fff;
+            text-decoration: none;
+        }
+        div#navigation .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        div#navigation .nav-row ul.list-inline {
+            margin-bottom: 0;
+        }
+        .project-grid {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 1.5rem;
+        }
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #fafbfd;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.08);
+        }
+        .project-card .project-thumb {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+            background: #fff;
+            padding: 10px;
+            display: block;
+            border-bottom: 1px solid #eef1f5;
+        }
+        .project-card .project-body {
+            padding: 16px 18px 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .project-card h6 {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .project-card p {
+            font-size: 14.5px;
+            color: #444;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+        .project-card .project-links a {
+            color: #447ec9;
+            font-size: 14px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .project-card .project-links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 767px) {
+            .lang-switch {
+                position: absolute;
+                top: 14px;
+                right: 56px;
+                margin-left: 0;
+                padding: 4px 10px;
+                font-size: 13px;
+                z-index: 5;
+            }
+        }
+    </style>
 
     <!-- JavaScript -->
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
@@ -30,26 +124,32 @@
                     <h5>卢攀忠</h5>
                 </div> <!-- #logo -->
                 <div id="navigation" class="col-md-8 col-lg-8">
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="zh.html#biography">关于</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="zh.html#news">新闻</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="zh.html#publications">出版</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="zh.html#patents">专利</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="zh.html#awards">荣誉</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="index.html">English</a>
-                        </li>
-                    </ul>
+                    <div class="nav-row">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="zh.html#biography">关于</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="zh.html#news">新闻</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="zh.html#publications">论文</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="zh.html#projects">项目</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="zh.html#patents">专利</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="zh.html#awards">荣誉</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="zh.html#teaching">教学</a>
+                            </li>
+                        </ul>
+                        <a href="index.html" class="lang-switch" title="Switch to English">English</a>
+                    </div>
                     <a href="javascript:void(0)" class="icon-link" data-bs-toggle="offcanvas" data-bs-target="#sidenav" aria-controls="sidenav">
                         <img src="assets/img/list.svg">
                     </a>
@@ -63,9 +163,11 @@
                         <ul>
                             <li><a href="zh.html#biography">关于</a></li>
                             <li><a href="zh.html#news">新闻</a></li>
-                            <li><a href="zh.html#publications">出版</a></li>
+                            <li><a href="zh.html#publications">论文</a></li>
+                            <li><a href="zh.html#projects">项目</a></li>
                             <li><a href="zh.html#patents">专利</a></li>
                             <li><a href="zh.html#awards">荣誉</a></li>
+                            <li><a href="zh.html#teaching">教学</a></li>
                             <li><a href="index.html">English</a></li>
                         </ul>
                     </div> <!-- .offcanvas-body -->
@@ -84,11 +186,11 @@
                         </h2>
                     </div>
                     <p class="title-position">
-                        科研助理
+                        博士研究生（2025级）
                     </p>
                     <p>
-                        西湖大学 <br>
-                        导师：<a href="https://scholar.google.co.uk/citations?user=6hA7WmUAAAAJ&hl=en" target="_blank">张岳</a> 教授
+                        浙江大学 &amp; 西湖大学（联培） <br>
+                        导师：<a href="https://frcchang.github.io/" target="_blank">张岳</a> 教授
                     </p>
                     <p class="email">
                         邮箱：<a href="mailto:panzhong171@gmail.com">panzhong171[at]gmail.com</a></p>
@@ -99,7 +201,7 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ" class="btn btn-icon btn-outline-secondary btn-sm" target="_blank">
+                            <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en" class="btn btn-icon btn-outline-secondary btn-sm" target="_blank">
                                 <i class="bx bxl-google"></i>
                             </a>
                         </li>
@@ -127,47 +229,161 @@
             <div id="biography" class="section">
                 <h4>关于</h4>
                 <hr>
-                <p>目前我在 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a> 担任科研助理，导师是 <a href="https://scholar.google.co.uk/citations?user=6hA7WmUAAAAJ&hl=en" target="_blank">张岳</a> 教授。<font color="#0000FF">与此同时，我计划申请24年春季/秋季入学的博士名额</font>。
-                    我的<b>研究兴趣</b>包括但不限于<b>多/跨模态</b>、<b>人机交互</b>、<b>机器学习</b>等。
-                    在此之前，我在 <a href="http://www.tju.edu.cn/" target="_blank">天津大学</a>（2020-2023）获得了工学硕士学位，导师是 <a href="https://scholar.google.com/citations?user=k-chMpIAAAAJ&hl=en" target="_blank">张梅山</a> 副教授；
-                    我在 <a href="http://www.hzau.edu.cn/en/HOME.htm" target="_blank">华中农业大学</a>（2016-2020）获得了理学学士学位。</p>
-                <p align="right"><a href="index.html">[English &rarr;]</a></p>
+                <p>我是 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a> 与 <a href="https://www.zju.edu.cn/" target="_blank">浙江大学</a> 联合培养的 2025 级博士研究生（博一），导师是 <a href="https://frcchang.github.io/" target="_blank">张岳</a> 教授。
+                    我当前的<b>研究方向</b>主要聚焦于 <b>多模态学习</b> 与 <b>基于大模型的 Agent</b>；同时，我也在参与若干 <b>创新创业</b> 项目。
+                    完整的论文列表请访问我的 <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en" target="_blank">Google Scholar 主页</a>。</p>
+                <p>在攻读博士之前，我曾在西湖大学担任科研助理（2023—2025）。我于 <a href="http://www.tju.edu.cn/" target="_blank">天津大学</a>（2020—2023）获得工学硕士学位，导师是 <a href="https://scholar.google.com/citations?user=k-chMpIAAAAJ&hl=en" target="_blank">张梅山</a> 副教授；并于 <a href="http://www.hzau.edu.cn/en/HOME.htm" target="_blank">华中农业大学</a>（2016—2020）获得理学学士学位。</p>
             </div> <!-- .section -->
             <div id="news" class="section">
                 <h4>新闻</h4>
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
+                        <p><span class="date">&#10148; [2025/09]</span>：我开始在 <a href="https://www.zju.edu.cn/" target="_blank">浙江大学</a> 与 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a> 联培项目攻读博士学位，导师为 <a href="https://frcchang.github.io/" target="_blank">张岳</a> 教授。</p>
+                        <p><span class="date">&#10148; [2024/07]</span>：我的一篇论文被 <a href="https://eccv.ecva.net/" target="_blank">ECCV 2024</a> 接受。</p>
                         <p><span class="date">&#10148; [2023/04]</span>：我入职 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a>，担任科研助理。</p>
-                        <p><span class="date">&#10148; [2023/01]</span>：我毕业于 <a href="http://www.tju.edu.cn/english/index.htm" target="_blank">天津大学</a>，获得工学硕士学位。</p>
+                        <p><span class="date">&#10148; [2023/01]</span>：我毕业于 <a href="http://www.tju.edu.cn/" target="_blank">天津大学</a>，获得工学硕士学位。</p>
                         <p><span class="date">&#10148; [2022/10]</span>：我的一篇论文被 <a href="https://2022.emnlp.org/" target="_blank">EMNLP 2022</a> 主会接受。</p>
                     </div> <!-- .col-md-12 -->
                 </div> <!-- .row -->
             </div> <!-- .section -->
             <div id="publications" class="section">
-                <h4>出版</h4>
+                <h4>论文</h4>
                 <hr>
-                <h6>会议论文</h6>
+                <p style="margin-bottom: 14px;">
+                    完整、最新的论文列表请访问
+                    <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en" target="_blank">
+                        <i class="bx bxl-google"></i> Google Scholar
+                    </a> 主页。
+                </p>
                 <ol class="pub-list-ol">
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://arxiv.org/abs/2602.03828" target="_blank">
+                                <em>AutoFigure: Generating and Refining Publication-Ready Scientific Illustrations.</em>
+                            </a>
+                            <br>
+                            Minjun Zhu, Zhen Lin, Yixuan Weng, <strong>Panzhong Lu</strong>, Qiujie Xie, Yifan Wei, Sifan Liu, Qiyao Sun, Yue Zhang. <b><em>ICLR</em></b> 2026
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://arxiv.org/abs/2603.06674" target="_blank">
+                                <em>AutoFigure-Edit: Generating Editable Scientific Illustration.</em>
+                            </a>
+                            <br>
+                            Zhen Lin, Qiujie Xie, Minjun Zhu, Shichen Li, Qiyao Sun, Enhao Gu, Yiran Ding, Ke Sun, Fang Guo, <strong>Panzhong Lu</strong>, Zhiyuan Ning, Yixuan Weng, Yue Zhang. <b><em>arXiv preprint</em></b> 2026
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://arxiv.org/abs/2506.18586" target="_blank">
+                                <em>Airalogy: AI-empowered universal data digitization for research automation.</em>
+                            </a>
+                            <br>
+                            Zijie Yang, Qiji Zhou, Fang Guo, Sijie Zhang, Yexun Xi, Jinglei Nie, Yudian Zhu, Liping Huang, Chou Wu, Yonghe Xia, Xiaoyu Ma, Yingming Pu, <strong>Panzhong Lu</strong>, Junshu Pan, Mingtao Chen, Tiannan Guo, Yanmei Dou, Hongyu Chen, Anping Zeng, Jiaxing Huang, Tian Xu, Yue Zhang. <b><em>arXiv preprint</em></b> 2025
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://arxiv.org/abs/2407.05382" target="_blank">
+                                <em>Rethinking Unsupervised Outlier Detection via Multiple Thresholding.</em>
+                            </a>
+                            <br>
+                            Zhonghang Liu, <strong>Panzhong Lu</strong>, Guoyang Xie, Zhichao Lu, Wen-Yan Lin. <b><em>ECCV</em></b> 2024
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://arxiv.org/abs/2405.13872" target="_blank">
+                                <em>Image-of-Thought Prompting for Visual Reasoning Refinement in Multimodal Large Language Models.</em>
+                            </a>
+                            <br>
+                            Qiji Zhou, Ruochen Zhou, Zike Hu, <strong>Panzhong Lu</strong>, Siyang Gao, Yue Zhang. <b><em>arXiv preprint</em></b> 2024
+                        </p>
+                    </li>
                     <li>
                         <p>
                             <a style="color: #447ec9" href="https://aclanthology.org/2022.emnlp-main.518" target="_blank">
                                 <em>Extending Phrase Grounding with Pronouns in Visual Dialogues.</em>
                             </a>
                             <br>
-                            <strong>Panzhong Lu</strong>, Xin Zhang, Meishan Zhang, Min Zhang. <b><em>EMNLP</em></b> 2022 (CCF-B)
+                            <strong>Panzhong Lu</strong>, Xin Zhang, Meishan Zhang, Min Zhang. <b><em>EMNLP</em></b> 2022
                         </p>
                     </li>
                     <li>
                         <p>
                             <a style="color: #447ec9" href="https://ieeexplore.ieee.org/document/8983031" target="_blank">
-                                <em>An active gene annotation corpus and its application on anti-epilepsy drug discovery.</em>
+                                <em>An Active Gene Annotation Corpus and Its Application on Anti-epilepsy Drug Discovery.</em>
                             </a>
                             <br>
-                            Yuxing Wang, Kaiyin Zhou, Jin-Dong Kim, Kevin B Cohen, Mina Gachloo, Yuxin Ren, Shanghui Nie, Xuan Qin, <strong>Panzhong Lu</strong>, Jingbo Xia. <b><em>IEEE BIBM</em></b> 2019 (CCF-B)
+                            Yuxing Wang, Kaiyin Zhou, Jin-Dong Kim, Kevin B. Cohen, Mina Gachloo, Yuxin Ren, Shanghui Nie, Xuan Qin, <strong>Panzhong Lu</strong>, Jingbo Xia. <b><em>IEEE BIBM</em></b> 2019
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://doi.org/10.1088/1742-6596/1069/1/012051" target="_blank">
+                                <em>Parameter Searching in Attractor Algorithm for Community Detection &mdash; An Application in Pathway Enrichment Analysis.</em>
+                            </a>
+                            <br>
+                            <strong>Panzhong Lu</strong>, Hanyi Zhang, Ying Liu, Yongze Wu, Xuan Qin, Jingbo Xia. <b><em>Journal of Physics: Conference Series</em></b> 1069, 012051, 2018
                         </p>
                     </li>
                 </ol>
+            </div> <!-- .section -->
+            <div id="projects" class="section">
+                <h4>项目</h4>
+                <hr>
+                <div class="row project-grid">
+                    <div class="col-md-6 col-12">
+                        <div class="project-card">
+                            <img src="images/VDM-crop-1.png" alt="VDM" class="project-thumb">
+                            <div class="project-body">
+                                <h6>定制化虚拟数字人（2023）</h6>
+                                <p>综合运用大语言模型、语音识别、语音合成与说话人生成等技术，打造可交互、可定制的虚拟数字人。</p>
+                                <div class="project-links">
+                                    <a href="meta/vdm.mp4" target="_blank">[演示]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="project-card">
+                            <img src="images/lesson.png" alt="Online Quiz System" class="project-thumb">
+                            <div class="project-body">
+                                <h6>学生在线测评系统（2023）</h6>
+                                <p>独立设计并基于 Django 实现了一套在线测评系统，已部署至云服务器，支持教师组织课堂与学生完成测试。</p>
+                                <div class="project-links">
+                                    <a href="https://www.westlakenlp.cn" target="_blank">[链接]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="project-card">
+                            <img src="images/drone.png" alt="Drone" class="project-thumb">
+                            <div class="project-body">
+                                <h6>仿真环境下的人机交互（2022）</h6>
+                                <p>利用无人机采集仿真环境图像，通过图像描述指引无人机飞向指定位置；提出基于像素变化跟踪的测距方法。</p>
+                                <div class="project-links">
+                                    <a href="meta/drone.mp4" target="_blank">[演示]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="project-card">
+                            <img src="images/VLN-crop-1.png" alt="VLN" class="project-thumb">
+                            <div class="project-body">
+                                <h6>真实环境下的视觉语言导航（2021）</h6>
+                                <p>基于 VLNCE 模型，探索无人机在真实环境中的视觉语言导航；通过 ROS 将用户指令与 RGB/深度图传入无人机执行相应动作。</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/nlpz127/p450" target="_blank">[代码]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div> <!-- .section -->
             <div id="patents" class="section">
                 <h4>专利</h4>
@@ -197,8 +413,19 @@
                 <h4>荣誉</h4>
                 <hr>
                 <ul style="list-style-type:disc;">
-                    <li>2018，获得国家励志奖学金。</li>
-                    <li>2017，获得国家励志奖学金。</li>
+                    <li>2023，西湖大学教职工运动会男子 200m 第二名。</li>
+                    <li>2021，天津大学优秀学生。</li>
+                    <li>2020，中国中文信息学会幽默识别评测任务三等奖。</li>
+                    <li>2020，华中农业大学优秀毕业生。</li>
+                    <li>2018，国家励志奖学金。</li>
+                    <li>2017，国家励志奖学金。</li>
+                </ul>
+            </div> <!-- .section -->
+            <div id="teaching" class="section">
+                <h4>教学</h4>
+                <hr>
+                <ul style="list-style-type:disc;">
+                    <li>2023 秋，助教，<em>计算机科学与编程导论</em>，西湖大学。</li>
                 </ul>
             </div> <!-- .section -->
             <hr> <!-- line -->
