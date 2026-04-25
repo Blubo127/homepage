@@ -239,6 +239,8 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
+                        <p><span class="date">&#10148; [2026/04]</span>：两篇论文（<em>AutoFigure-Edit</em> 与 <em>AiraXiv</em>）被 <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a> Demo Track 接受。</p>
+                        <p><span class="date">&#10148; [2026/04]</span>：一篇论文（<em>AutoFigure</em>）被 <a href="https://iclr.cc/Conferences/2026" target="_blank">ICLR 2026</a> 主会接受。</p>
                         <p><span class="date">&#10148; [2025/09]</span>：我开始在 <a href="https://www.zju.edu.cn/" target="_blank">浙江大学</a> 与 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a> 联培项目攻读博士学位，导师为 <a href="https://frcchang.github.io/" target="_blank">张岳</a> 教授。</p>
                         <p><span class="date">&#10148; [2024/07]</span>：我的一篇论文被 <a href="https://eccv.ecva.net/" target="_blank">ECCV 2024</a> 接受。</p>
                         <p><span class="date">&#10148; [2023/04]</span>：我入职 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a>，担任科研助理。</p>
@@ -248,33 +250,84 @@
                 </div> <!-- .row -->
             </div> <!-- .section -->
             <div id="publications" class="section">
-                <h4>论文</h4>
+                <h4>代表性论文</h4>
                 <hr>
                 <p style="margin-bottom: 14px;">
                     完整、最新的论文列表请访问
                     <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en" target="_blank">
                         <i class="bx bxl-google"></i> Google Scholar
-                    </a> 主页。
+                    </a> 主页。（<sup>*</sup> 共同第一作者）
                 </p>
+                <p id="scholar-stats" style="font-size: 13.5px; color: #666; margin-bottom: 14px; display: none;"></p>
+                <script type="text/javascript">
+                    (function () {
+                        fetch('meta/scholar.json?_=' + Date.now(), { cache: 'no-cache' })
+                            .then(function (r) { return r.ok ? r.json() : null; })
+                            .then(function (d) {
+                                if (!d || (!d.citations && !d.h_index && !d.i10_index)) return;
+                                var el = document.getElementById('scholar-stats');
+                                if (!el) return;
+                                el.innerHTML =
+                                    '<i class="bx bxs-quote-alt-left"></i> ' +
+                                    '总引用：<strong>' + d.citations + '</strong>' +
+                                    ' &nbsp;·&nbsp; h-index：<strong>' + d.h_index + '</strong>' +
+                                    ' &nbsp;·&nbsp; i10-index：<strong>' + d.i10_index + '</strong>' +
+                                    (d.updated && d.updated !== 'pending'
+                                        ? ' <span style="opacity:0.6">（更新于 ' + d.updated + '）</span>'
+                                        : '');
+                                el.style.display = 'block';
+                            })
+                            .catch(function () { });
+                    })();
+                </script>
+                <h6>会议论文</h6>
                 <ol class="pub-list-ol">
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://arxiv.org/abs/2603.06674" target="_blank">
+                                <em>AutoFigure-Edit: Generating Editable Scientific Illustrations via Reference-Guided Styling.</em>
+                            </a>
+                            <br>
+                            Zhen Lin, Qiujie Xie, Minjun Zhu, Shichen Li, QiYao Sun, Enhao Gu, Yiran Ding, Ke Sun, Fang Guo, <strong>Panzhong Lu</strong>, Zhiyuan Ning, Yixuan Weng, Yue Zhang. <b><em>ACL</em></b> 2026 (Demo)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>AiraXiv: An AI-Driven Open-Access Platform for Human and AI Scientists.</em>
+                            <br>
+                            Junshu Pan<sup>*</sup>, <strong>Panzhong Lu<sup>*</sup></strong>, Yixuan Weng<sup>*</sup>, QiYao Sun<sup>*</sup>, Fang Guo, Zijie Yang, Qiji Zhou, Yue Zhang. <b><em>ACL</em></b> 2026 (Demo)
+                        </p>
+                    </li>
                     <li>
                         <p>
                             <a style="color: #447ec9" href="https://arxiv.org/abs/2602.03828" target="_blank">
                                 <em>AutoFigure: Generating and Refining Publication-Ready Scientific Illustrations.</em>
                             </a>
                             <br>
-                            Minjun Zhu, Zhen Lin, Yixuan Weng, <strong>Panzhong Lu</strong>, Qiujie Xie, Yifan Wei, Sifan Liu, Qiyao Sun, Yue Zhang. <b><em>ICLR</em></b> 2026
+                            Minjun Zhu, Zhen Lin, Yixuan Weng, <strong>Panzhong Lu</strong>, Qiujie Xie, Yifan Wei, Sifan Liu, Qiyao Sun, Yue Zhang. <b><em>ICLR</em></b> 2026 (Main)
                         </p>
                     </li>
                     <li>
                         <p>
-                            <a style="color: #447ec9" href="https://arxiv.org/abs/2603.06674" target="_blank">
-                                <em>AutoFigure-Edit: Generating Editable Scientific Illustration.</em>
+                            <a style="color: #447ec9" href="https://arxiv.org/abs/2407.05382" target="_blank">
+                                <em>Rethinking Unsupervised Outlier Detection via Multiple Thresholding.</em>
                             </a>
                             <br>
-                            Zhen Lin, Qiujie Xie, Minjun Zhu, Shichen Li, Qiyao Sun, Enhao Gu, Yiran Ding, Ke Sun, Fang Guo, <strong>Panzhong Lu</strong>, Zhiyuan Ning, Yixuan Weng, Yue Zhang. <b><em>arXiv preprint</em></b> 2026
+                            Zhonghang Liu, <strong>Panzhong Lu</strong>, Guoyang Xie, Zhichao Lu, Wen-Yan Lin. <b><em>ECCV</em></b> 2024 (Main)
                         </p>
                     </li>
+                    <li>
+                        <p>
+                            <a style="color: #447ec9" href="https://aclanthology.org/2022.emnlp-main.518" target="_blank">
+                                <em>Extending Phrase Grounding with Pronouns in Visual Dialogues.</em>
+                            </a>
+                            <br>
+                            <strong>Panzhong Lu</strong>, Xin Zhang, Meishan Zhang, Min Zhang. <b><em>EMNLP</em></b> 2022 (Main)
+                        </p>
+                    </li>
+                </ol>
+                <h6 style="margin-top: 24px;">预印本</h6>
+                <ol class="pub-list-ol">
                     <li>
                         <p>
                             <a style="color: #447ec9" href="https://arxiv.org/abs/2506.18586" target="_blank">
@@ -286,47 +339,11 @@
                     </li>
                     <li>
                         <p>
-                            <a style="color: #447ec9" href="https://arxiv.org/abs/2407.05382" target="_blank">
-                                <em>Rethinking Unsupervised Outlier Detection via Multiple Thresholding.</em>
-                            </a>
-                            <br>
-                            Zhonghang Liu, <strong>Panzhong Lu</strong>, Guoyang Xie, Zhichao Lu, Wen-Yan Lin. <b><em>ECCV</em></b> 2024
-                        </p>
-                    </li>
-                    <li>
-                        <p>
                             <a style="color: #447ec9" href="https://arxiv.org/abs/2405.13872" target="_blank">
                                 <em>Image-of-Thought Prompting for Visual Reasoning Refinement in Multimodal Large Language Models.</em>
                             </a>
                             <br>
                             Qiji Zhou, Ruochen Zhou, Zike Hu, <strong>Panzhong Lu</strong>, Siyang Gao, Yue Zhang. <b><em>arXiv preprint</em></b> 2024
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a style="color: #447ec9" href="https://aclanthology.org/2022.emnlp-main.518" target="_blank">
-                                <em>Extending Phrase Grounding with Pronouns in Visual Dialogues.</em>
-                            </a>
-                            <br>
-                            <strong>Panzhong Lu</strong>, Xin Zhang, Meishan Zhang, Min Zhang. <b><em>EMNLP</em></b> 2022
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a style="color: #447ec9" href="https://ieeexplore.ieee.org/document/8983031" target="_blank">
-                                <em>An Active Gene Annotation Corpus and Its Application on Anti-epilepsy Drug Discovery.</em>
-                            </a>
-                            <br>
-                            Yuxing Wang, Kaiyin Zhou, Jin-Dong Kim, Kevin B. Cohen, Mina Gachloo, Yuxin Ren, Shanghui Nie, Xuan Qin, <strong>Panzhong Lu</strong>, Jingbo Xia. <b><em>IEEE BIBM</em></b> 2019
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a style="color: #447ec9" href="https://doi.org/10.1088/1742-6596/1069/1/012051" target="_blank">
-                                <em>Parameter Searching in Attractor Algorithm for Community Detection &mdash; An Application in Pathway Enrichment Analysis.</em>
-                            </a>
-                            <br>
-                            <strong>Panzhong Lu</strong>, Hanyi Zhang, Ying Liu, Yongze Wu, Xuan Qin, Jingbo Xia. <b><em>Journal of Physics: Conference Series</em></b> 1069, 012051, 2018
                         </p>
                     </li>
                 </ol>
@@ -337,12 +354,24 @@
                 <div class="row project-grid">
                     <div class="col-md-6 col-12">
                         <div class="project-card">
-                            <img src="images/VDM-crop-1.png" alt="VDM" class="project-thumb">
+                            <img src="images/airalogy.png" alt="Airalogy" class="project-thumb">
                             <div class="project-body">
-                                <h6>定制化虚拟数字人（2023）</h6>
-                                <p>综合运用大语言模型、语音识别、语音合成与说话人生成等技术，打造可交互、可定制的虚拟数字人。</p>
+                                <h6>Airalogy（2025）</h6>
+                                <p>全球首个全学科通用的科研电子化、自动化与加速平台，目前已上线运行。后台 AI API 系统的主要负责人之一。</p>
                                 <div class="project-links">
-                                    <a href="meta/vdm.mp4" target="_blank">[演示]</a>
+                                    <a href="https://airalogy.com/" target="_blank">[官网]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="project-card">
+                            <img src="images/fastdetectgpt.png" alt="FastDetectGPT" class="project-thumb">
+                            <div class="project-body">
+                                <h6>FastDetectGPT（2025）</h6>
+                                <p>团队在运营中的商业化项目之一。独立完成前后端用户系统、后台支付系统，以及 Token 计算与计费系统的开发。</p>
+                                <div class="project-links">
+                                    <a href="https://fastdetect.net/" target="_blank">[官网]</a>
                                 </div>
                             </div>
                         </div>
@@ -351,10 +380,22 @@
                         <div class="project-card">
                             <img src="images/lesson.png" alt="Online Quiz System" class="project-thumb">
                             <div class="project-body">
-                                <h6>学生在线测评系统（2023）</h6>
+                                <h6>学生在线测评系统（2024）</h6>
                                 <p>独立设计并基于 Django 实现了一套在线测评系统，已部署至云服务器，支持教师组织课堂与学生完成测试。</p>
                                 <div class="project-links">
                                     <a href="https://www.westlakenlp.cn" target="_blank">[链接]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="project-card">
+                            <img src="images/VDM-crop-1.png" alt="VDM" class="project-thumb">
+                            <div class="project-body">
+                                <h6>定制化虚拟数字人（2023）</h6>
+                                <p>综合运用大语言模型、语音识别、语音合成与说话人生成等技术，打造可交互、可定制的虚拟数字人。</p>
+                                <div class="project-links">
+                                    <a href="meta/vdm.mp4" target="_blank">[演示]</a>
                                 </div>
                             </div>
                         </div>
@@ -389,6 +430,24 @@
                 <h4>专利</h4>
                 <hr>
                 <ol class="pub-list-ol">
+                    <li>
+                        <p>
+                            <em>一种支持多学科共用的科研活动管理与应用平台。</em>
+                            <br>
+                            张岳，杨子杰，郭放，周启楫，<strong>卢攀忠</strong>，潘俊树，许田。
+                            <br>
+                            中国，申请号 202510086469.X，申请日 2025-01-20，公开号 CN120013466A，公开日 2025-05-16。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>多模态科研数据记录方法、系统、终端及存储介质。</em>
+                            <br>
+                            张岳，杨子杰，周启楫，郭放，潘俊树，<strong>卢攀忠</strong>，许田。
+                            <br>
+                            中国，申请号 202510086467.0，申请日 2025-01-20，公开号 CN120011362A，公开日 2025-05-16。
+                        </p>
+                    </li>
                     <li>
                         <p>
                             <em>一种面向多模态的交互式数据标注方法及系统。</em>
@@ -428,23 +487,6 @@
                     <li>2023 秋，助教，<em>计算机科学与编程导论</em>，西湖大学。</li>
                 </ul>
             </div> <!-- .section -->
-            <hr> <!-- line -->
-            <div class="text-center">
-                欢迎来到卢攀忠的主页。<br>
-                No.
-                <script type="text/javascript">
-                    var sc_project = 12347113;
-                    var sc_invisible = 0;
-                    var sc_security = "21aca5d1";
-                    var sc_https = 1;
-                    var scJsHost = "https://";
-                    document.write("<sc" + "ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
-                </script>
-                位访客 (自 2023 年 1 月起)。
-                <noscript>
-                    <div class="statcounter"><a title="Web Analytics Made Easy - StatCounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12347113/0/21aca5d1/0/" alt="Web Analytics Made Easy - StatCounter"></a></div>
-                </noscript>
-            </div>
         </div> <!-- .container -->
     </div> <!-- #content -->
     <div id="copyright">
