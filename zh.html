@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>卢攀忠的主页</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lu, Panzhong is pursuing his dream">
-    <meta name="keywords" content="Panzhong Lu, 卢攀忠, lupanzhong, Panzhong, Lu, Deep Learning, Machine Learning, ZJU, Westlake, TJU, HZAU, Multimodal, Agent, Visual Language Model and Human-Computer Interaction">
+    <meta name="keywords"
+        content="Panzhong Lu, 卢攀忠, lupanzhong, Panzhong, Lu, Deep Learning, Machine Learning, ZJU, Westlake, TJU, HZAU, Multimodal, Agent, Visual Language Model and Human-Computer Interaction">
     <meta name="author" content="卢攀忠" />
     <!-- Icon -->
     <link href="images/pi.png" rel="shortcut icon" type="image/x-icon">
@@ -31,25 +34,30 @@
             transition: all .2s ease;
             vertical-align: middle;
         }
+
         .lang-switch:hover {
             background-color: #dc143c;
             border-color: #dc143c;
             color: #fff;
             text-decoration: none;
         }
+
         div#navigation .nav-row {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             flex-wrap: wrap;
         }
+
         div#navigation .nav-row ul.list-inline {
             margin-bottom: 0;
         }
+
         .project-grid {
             --bs-gutter-x: 1.5rem;
             --bs-gutter-y: 1.5rem;
         }
+
         .project-card {
             display: flex;
             flex-direction: column;
@@ -60,10 +68,12 @@
             overflow: hidden;
             transition: transform .2s ease, box-shadow .2s ease;
         }
+
         .project-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
         }
+
         .project-card .project-thumb {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -73,31 +83,46 @@
             display: block;
             border-bottom: 1px solid #eef1f5;
         }
+
         .project-card .project-body {
             padding: 16px 18px 18px;
             display: flex;
             flex-direction: column;
             flex: 1;
         }
+
         .project-card h6 {
             margin-bottom: 8px;
             font-weight: 600;
         }
+
         .project-card p {
             font-size: 14.5px;
             color: #444;
             margin-bottom: 12px;
             flex: 1;
         }
+
         .project-card .project-links a {
             color: #447ec9;
             font-size: 14px;
             margin-right: 10px;
             text-decoration: none;
         }
+
         .project-card .project-links a:hover {
             text-decoration: underline;
         }
+
+        /* Profile photo sizing */
+        #head .col-md-5 img {
+            width: 100%;
+            max-width: 260px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
         @media (max-width: 767px) {
             .lang-switch {
                 position: absolute;
@@ -108,6 +133,11 @@
                 font-size: 13px;
                 z-index: 5;
             }
+
+            #head .col-md-5 img {
+                max-width: 200px;
+                margin-top: 6px;
+            }
         }
     </style>
 
@@ -115,6 +145,7 @@
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div id="header">
         <div class="container">
@@ -150,14 +181,16 @@
                         </ul>
                         <a href="index.html" class="lang-switch" title="Switch to English">English</a>
                     </div>
-                    <a href="javascript:void(0)" class="icon-link" data-bs-toggle="offcanvas" data-bs-target="#sidenav" aria-controls="sidenav">
+                    <a href="javascript:void(0)" class="icon-link" data-bs-toggle="offcanvas" data-bs-target="#sidenav"
+                        aria-controls="sidenav">
                         <img src="assets/img/list.svg">
                     </a>
                 </div> <!-- #navigation -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="sidenav" aria-labelledby="sidenav-label">
                     <div class="offcanvas-header">
                         <h5 id="sidenav-label">菜单</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div> <!-- .offcanvas-header -->
                     <div class="offcanvas-body">
                         <ul>
@@ -181,8 +214,8 @@
                 <div class="col-md-7">
                     <div class="name-zh">
                         <h2>
-                        <span>卢攀忠</span>
-                        <small style="font-size: 0.6em; color: #666;">&nbsp;(Panzhong Lu)</small>
+                            <span>卢攀忠</span>
+                            <small style="font-size: 0.6em; color: #666;">&nbsp;(Panzhong Lu)</small>
                         </h2>
                     </div>
                     <p class="title-position">
@@ -196,17 +229,20 @@
                         邮箱：<a href="mailto:panzhong171@gmail.com">panzhong171[at]gmail.com</a></p>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="https://github.com/nlpz127" class="btn btn-icon btn-outline-secondary btn-sm" target="_blank">
+                            <a href="https://github.com/nlpz127" class="btn btn-icon btn-outline-secondary btn-sm"
+                                target="_blank">
                                 <i class="bx bxl-github"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en" class="btn btn-icon btn-outline-secondary btn-sm" target="_blank">
+                            <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en"
+                                class="btn btn-icon btn-outline-secondary btn-sm" target="_blank">
                                 <i class="bx bxl-google"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://twitter.com/nlpz_127" class="btn btn-icon btn-outline-secondary btn-sm" target="_blank">
+                            <a href="https://twitter.com/nlpz_127" class="btn btn-icon btn-outline-secondary btn-sm"
+                                target="_blank">
                                 <i class="bx bxl-twitter"></i>
                             </a>
                         </li>
@@ -216,36 +252,54 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="mailto:panzhong171@gmail.com" class="btn btn-icon btn-outline-secondary btn-sm" target="_blank">
+                            <a href="mailto:panzhong171@gmail.com" class="btn btn-icon btn-outline-secondary btn-sm"
+                                target="_blank">
                                 <i class="bx bx-envelope"></i>
                             </a>
                         </li>
                     </ul>
                 </div> <!-- .col-md-7 -->
                 <div class="col-md-5">
-                    <img src="images/self-portrait.png" alt="Photo">
+                    <img src="images/profile.jpg" alt="Photo">
                 </div> <!-- .col-md-5 -->
             </div> <!-- .row -->
             <div id="biography" class="section">
                 <h4>关于</h4>
                 <hr>
-                <p>我是 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a> 与 <a href="https://www.zju.edu.cn/" target="_blank">浙江大学</a> 联合培养的 2025 级博士研究生（博一），导师是 <a href="https://frcchang.github.io/" target="_blank">张岳</a> 教授。
+                <p>我是 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a> 与 <a
+                        href="https://www.zju.edu.cn/" target="_blank">浙江大学</a> 联合培养的 2025 级博士研究生（博一），导师是 <a
+                        href="https://frcchang.github.io/" target="_blank">张岳</a> 教授。
                     我当前的<b>研究方向</b>主要聚焦于 <b>多模态学习</b> 与 <b>基于大模型的 Agent</b>；同时，我也在参与若干 <b>创新创业</b> 项目。
-                    完整的论文列表请访问我的 <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en" target="_blank">Google Scholar 主页</a>。</p>
-                <p>在攻读博士之前，我曾在西湖大学担任科研助理（2023—2025）。我于 <a href="http://www.tju.edu.cn/" target="_blank">天津大学</a>（2020—2023）获得工学硕士学位，导师是 <a href="https://scholar.google.com/citations?user=k-chMpIAAAAJ&hl=en" target="_blank">张梅山</a> 副教授；并于 <a href="http://www.hzau.edu.cn/en/HOME.htm" target="_blank">华中农业大学</a>（2016—2020）获得理学学士学位。</p>
+                    完整的论文列表请访问我的 <a href="https://scholar.google.com/citations?user=5u4mhmoAAAAJ&hl=en"
+                        target="_blank">Google Scholar 主页</a>。</p>
+                <p>在攻读博士之前，我曾在西湖大学担任科研助理（2023—2025）。我于 <a href="http://www.tju.edu.cn/"
+                        target="_blank">天津大学</a>（2020—2023）获得工学硕士学位，导师是 <a
+                        href="https://scholar.google.com/citations?user=k-chMpIAAAAJ&hl=en" target="_blank">张梅山</a>
+                    副教授；并于 <a href="http://www.hzau.edu.cn/en/HOME.htm" target="_blank">华中农业大学</a>（2016—2020）获得理学学士学位。
+                </p>
             </div> <!-- .section -->
             <div id="news" class="section">
                 <h4>新闻</h4>
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                        <p><span class="date">&#10148; [2026/04]</span>：两篇论文（<em>AutoFigure-Edit</em> 与 <em>AiraXiv</em>）被 <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a> Demo Track 接受。</p>
-                        <p><span class="date">&#10148; [2026/04]</span>：一篇论文（<em>AutoFigure</em>）被 <a href="https://iclr.cc/Conferences/2026" target="_blank">ICLR 2026</a> 主会接受。</p>
-                        <p><span class="date">&#10148; [2025/09]</span>：我开始在 <a href="https://www.zju.edu.cn/" target="_blank">浙江大学</a> 与 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a> 联培项目攻读博士学位，导师为 <a href="https://frcchang.github.io/" target="_blank">张岳</a> 教授。</p>
-                        <p><span class="date">&#10148; [2024/07]</span>：我的一篇论文被 <a href="https://eccv.ecva.net/" target="_blank">ECCV 2024</a> 接受。</p>
-                        <p><span class="date">&#10148; [2023/04]</span>：我入职 <a href="https://www.westlake.edu.cn/" target="_blank">西湖大学</a>，担任科研助理。</p>
-                        <p><span class="date">&#10148; [2023/01]</span>：我毕业于 <a href="http://www.tju.edu.cn/" target="_blank">天津大学</a>，获得工学硕士学位。</p>
-                        <p><span class="date">&#10148; [2022/10]</span>：我的一篇论文被 <a href="https://2022.emnlp.org/" target="_blank">EMNLP 2022</a> 主会接受。</p>
+                        <p><span class="date">&#10148; [2026/04]</span>：两篇论文（<em>AutoFigure-Edit</em> 与
+                            <em>AiraXiv</em>）被 <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a> Demo
+                            Track 接受。</p>
+                        <p><span class="date">&#10148; [2026/04]</span>：一篇论文（<em>AutoFigure</em>）被 <a
+                                href="https://iclr.cc/Conferences/2026" target="_blank">ICLR 2026</a> 主会接受。</p>
+                        <p><span class="date">&#10148; [2025/09]</span>：我开始在 <a href="https://www.zju.edu.cn/"
+                                target="_blank">浙江大学</a> 与 <a href="https://www.westlake.edu.cn/"
+                                target="_blank">西湖大学</a> 联培项目攻读博士学位，导师为 <a href="https://frcchang.github.io/"
+                                target="_blank">张岳</a> 教授。</p>
+                        <p><span class="date">&#10148; [2024/07]</span>：我的一篇论文被 <a href="https://eccv.ecva.net/"
+                                target="_blank">ECCV 2024</a> 接受。</p>
+                        <p><span class="date">&#10148; [2023/04]</span>：我入职 <a href="https://www.westlake.edu.cn/"
+                                target="_blank">西湖大学</a>，担任科研助理。</p>
+                        <p><span class="date">&#10148; [2023/01]</span>：我毕业于 <a href="http://www.tju.edu.cn/"
+                                target="_blank">天津大学</a>，获得工学硕士学位。</p>
+                        <p><span class="date">&#10148; [2022/10]</span>：我的一篇论文被 <a href="https://2022.emnlp.org/"
+                                target="_blank">EMNLP 2022</a> 主会接受。</p>
                     </div> <!-- .col-md-12 -->
                 </div> <!-- .row -->
             </div> <!-- .section -->
@@ -285,17 +339,22 @@
                     <li>
                         <p>
                             <a style="color: #447ec9" href="https://arxiv.org/abs/2603.06674" target="_blank">
-                                <em>AutoFigure-Edit: Generating Editable Scientific Illustrations via Reference-Guided Styling.</em>
+                                <em>AutoFigure-Edit: Generating Editable Scientific Illustrations via Reference-Guided
+                                    Styling.</em>
                             </a>
                             <br>
-                            Zhen Lin, Qiujie Xie, Minjun Zhu, Shichen Li, QiYao Sun, Enhao Gu, Yiran Ding, Ke Sun, Fang Guo, <strong>Panzhong Lu</strong>, Zhiyuan Ning, Yixuan Weng, Yue Zhang. <b><em>ACL</em></b> 2026 (Demo)
+                            Zhen Lin, Qiujie Xie, Minjun Zhu, Shichen Li, QiYao Sun, Enhao Gu, Yiran Ding, Ke Sun, Fang
+                            Guo, <strong>Panzhong Lu</strong>, Zhiyuan Ning, Yixuan Weng, Yue Zhang. <b><em>ACL</em></b>
+                            2026 (Demo)
                         </p>
                     </li>
                     <li>
                         <p>
                             <em>AiraXiv: An AI-Driven Open-Access Platform for Human and AI Scientists.</em>
                             <br>
-                            Junshu Pan<sup>*</sup>, <strong>Panzhong Lu<sup>*</sup></strong>, Yixuan Weng<sup>*</sup>, QiYao Sun<sup>*</sup>, Fang Guo, Zijie Yang, Qiji Zhou, Yue Zhang. <b><em>ACL</em></b> 2026 (Demo)
+                            Junshu Pan<sup>*</sup>, <strong>Panzhong Lu<sup>*</sup></strong>, Yixuan Weng<sup>*</sup>,
+                            QiYao Sun<sup>*</sup>, Fang Guo, Zijie Yang, Qiji Zhou, Yue Zhang. <b><em>ACL</em></b> 2026
+                            (Demo)
                         </p>
                     </li>
                     <li>
@@ -304,7 +363,8 @@
                                 <em>AutoFigure: Generating and Refining Publication-Ready Scientific Illustrations.</em>
                             </a>
                             <br>
-                            Minjun Zhu, Zhen Lin, Yixuan Weng, <strong>Panzhong Lu</strong>, Qiujie Xie, Yifan Wei, Sifan Liu, Qiyao Sun, Yue Zhang. <b><em>ICLR</em></b> 2026 (Main)
+                            Minjun Zhu, Zhen Lin, Yixuan Weng, <strong>Panzhong Lu</strong>, Qiujie Xie, Yifan Wei,
+                            Sifan Liu, Qiyao Sun, Yue Zhang. <b><em>ICLR</em></b> 2026 (Main)
                         </p>
                     </li>
                     <li>
@@ -313,16 +373,19 @@
                                 <em>Rethinking Unsupervised Outlier Detection via Multiple Thresholding.</em>
                             </a>
                             <br>
-                            Zhonghang Liu, <strong>Panzhong Lu</strong>, Guoyang Xie, Zhichao Lu, Wen-Yan Lin. <b><em>ECCV</em></b> 2024 (Main)
+                            Zhonghang Liu, <strong>Panzhong Lu</strong>, Guoyang Xie, Zhichao Lu, Wen-Yan Lin.
+                            <b><em>ECCV</em></b> 2024 (Main)
                         </p>
                     </li>
                     <li>
                         <p>
-                            <a style="color: #447ec9" href="https://aclanthology.org/2022.emnlp-main.518" target="_blank">
+                            <a style="color: #447ec9" href="https://aclanthology.org/2022.emnlp-main.518"
+                                target="_blank">
                                 <em>Extending Phrase Grounding with Pronouns in Visual Dialogues.</em>
                             </a>
                             <br>
-                            <strong>Panzhong Lu</strong>, Xin Zhang, Meishan Zhang, Min Zhang. <b><em>EMNLP</em></b> 2022 (Main)
+                            <strong>Panzhong Lu</strong>, Xin Zhang, Meishan Zhang, Min Zhang. <b><em>EMNLP</em></b>
+                            2022 (Main)
                         </p>
                     </li>
                 </ol>
@@ -334,16 +397,21 @@
                                 <em>Airalogy: AI-empowered universal data digitization for research automation.</em>
                             </a>
                             <br>
-                            Zijie Yang, Qiji Zhou, Fang Guo, Sijie Zhang, Yexun Xi, Jinglei Nie, Yudian Zhu, Liping Huang, Chou Wu, Yonghe Xia, Xiaoyu Ma, Yingming Pu, <strong>Panzhong Lu</strong>, Junshu Pan, Mingtao Chen, Tiannan Guo, Yanmei Dou, Hongyu Chen, Anping Zeng, Jiaxing Huang, Tian Xu, Yue Zhang. <b><em>arXiv preprint</em></b> 2025
+                            Zijie Yang, Qiji Zhou, Fang Guo, Sijie Zhang, Yexun Xi, Jinglei Nie, Yudian Zhu, Liping
+                            Huang, Chou Wu, Yonghe Xia, Xiaoyu Ma, Yingming Pu, <strong>Panzhong Lu</strong>, Junshu
+                            Pan, Mingtao Chen, Tiannan Guo, Yanmei Dou, Hongyu Chen, Anping Zeng, Jiaxing Huang, Tian
+                            Xu, Yue Zhang. <b><em>arXiv preprint</em></b> 2025
                         </p>
                     </li>
                     <li>
                         <p>
                             <a style="color: #447ec9" href="https://arxiv.org/abs/2405.13872" target="_blank">
-                                <em>Image-of-Thought Prompting for Visual Reasoning Refinement in Multimodal Large Language Models.</em>
+                                <em>Image-of-Thought Prompting for Visual Reasoning Refinement in Multimodal Large
+                                    Language Models.</em>
                             </a>
                             <br>
-                            Qiji Zhou, Ruochen Zhou, Zike Hu, <strong>Panzhong Lu</strong>, Siyang Gao, Yue Zhang. <b><em>arXiv preprint</em></b> 2024
+                            Qiji Zhou, Ruochen Zhou, Zike Hu, <strong>Panzhong Lu</strong>, Siyang Gao, Yue Zhang.
+                            <b><em>arXiv preprint</em></b> 2024
                         </p>
                     </li>
                 </ol>
@@ -510,7 +578,7 @@
                 navigationOffsets = [],
                 passedNavIndex = -1
 
-            $(".list-inline-item > a", "#navigation").each(function() {
+            $(".list-inline-item > a", "#navigation").each(function () {
                 let aid = $(this).attr("href")
                 if (aid && !aid.endsWith(".html")) {
                     let hashIdx = aid.indexOf("#")
@@ -525,7 +593,7 @@
                     }
                 }
             })
-            for (let i = 0; i < navigationOffsets.length; ++ i) {
+            for (let i = 0; i < navigationOffsets.length; ++i) {
                 if (currentOffset > navigationOffsets[i]["offset"]) {
                     passedNavIndex = i
                 }
@@ -538,7 +606,7 @@
             scrollOffset = 600,
             offsetFromTop = parseInt(scrollOffset, 10)
 
-        window.addEventListener("scroll", function(e) {
+        window.addEventListener("scroll", function (e) {
             let currentActiveNav = $(".list-inline-item.active", "#navigation"),
                 currentOffset = e.currentTarget.pageYOffset,
                 currentSection = getCurrentSection(currentOffset)
@@ -555,12 +623,12 @@
         })
     </script>
     <script type="text/javascript">
-        $(".btn-scroll-top").click(function() {
-            $('html, body').animate({scrollTop: 0}, 200)
+        $(".btn-scroll-top").click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 200)
         })
     </script>
     <script type="text/javascript">
-        $("a", "#navigation").click(function(e) {
+        $("a", "#navigation").click(function (e) {
             let aid = $(this).attr("href"),
                 headerHeight = $("#header").outerHeight()
 
@@ -568,10 +636,11 @@
                 let hash = aid.substring(aid.indexOf("#"))
                 if ($(hash).length) {
                     e.preventDefault()
-                    $('html, body').animate({scrollTop: $(hash).offset().top - headerHeight}, 200)
+                    $('html, body').animate({ scrollTop: $(hash).offset().top - headerHeight }, 200)
                 }
             }
         })
     </script>
 </body>
+
 </html>

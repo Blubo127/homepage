@@ -116,6 +116,15 @@
             text-decoration: underline;
         }
 
+        /* Profile photo sizing */
+        #head .col-md-5 img {
+            width: 100%;
+            max-width: 260px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
         @media (max-width: 767px) {
             .lang-switch {
                 position: absolute;
@@ -125,6 +134,11 @@
                 padding: 4px 10px;
                 font-size: 13px;
                 z-index: 5;
+            }
+
+            #head .col-md-5 img {
+                max-width: 200px;
+                margin-top: 6px;
             }
         }
     </style>
@@ -249,7 +263,7 @@
                     </ul>
                 </div> <!-- .col-md-7 -->
                 <div class="col-md-5">
-                    <img src="images/self-portrait.png" alt="Photo">
+                    <img src="images/profile.jpg" alt="Photo">
                 </div> <!-- .col-md-5 -->
             </div> <!-- .row -->
             <div id="biography" class="section">
